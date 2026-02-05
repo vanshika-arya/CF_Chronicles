@@ -1,0 +1,15 @@
+import math
+x1, y1, x2, y2 = map(int, input().split())
+x3, y3, x4, y4 = map(int, input().split())
+
+cx1 = (x1 + x2) / 2
+cy1 = (y1 + y2) / 2
+cx2 = (x3 + x4) / 2
+cy2 = (y3 + y4) / 2
+r1 = math.dist((x1, y1), (x2, y2)) / 2
+r2 = math.dist((x3, y3), (x4, y4)) / 2
+d = math.dist((cx1, cy1), (cx2, cy2))
+if d <= r1 + r2:
+    print("YES")
+else:
+    print("NO")
