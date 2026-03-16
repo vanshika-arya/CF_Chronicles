@@ -1,0 +1,10 @@
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
+
+a.sort()
+ans = 100000
+
+for i in range(m - n + 1):
+    ans = min(ans, a[i+n-1] - a[i])
+
+print(ans)
